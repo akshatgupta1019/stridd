@@ -7,3 +7,5 @@ run npm install in both client and server folder
 then run, nodemon App in server folder to start the server side development
 
 and run, NPM start in client side folder to start the client side . 
+
+~~ END ~~
