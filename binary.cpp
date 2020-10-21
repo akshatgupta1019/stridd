@@ -1,33 +1,30 @@
-#include<iostream.h>
-#include<conio.h>
-#include<process.h>
-int bsearch(int arr[],int size,int item);
+#include<iostream>
+using namespace std;
+int BinrySearch(int a[],int size,int possion);
 
 int main()
 {
-clrscr();
-int arr[20],item,size,index;
+int a[20],item,size,possion;
 cout<<"ENTER SIZE OF ARRAY";
 cin>>size;
 cout<<"ENTER ELEMENTS OF ARRAY";
 for(int i=0;i<size;i++)
-cin>>arr[i];
+cin>>a[i];
 cout<<"ENTER ELEMENT TO BE SEARCHED";
 cin>>item;
 
-index=bsearch(arr,size,item);
+possion=BinrySearch(a,size,item);
 
-if(index==-1)
+if(possion==-1)
 	cout<<"ELEMENT NOT FOUND";
 else
-	cout<<"ELEMENT FOUND AT INDEX  "<<index<<"   POSITION "<<(index+1)<<endl;
-getch();
+	cout<<"ELEMENT FOUND AT POSSION  "<<possion<<"   POSITION "<<(possion+1)<<endl;
 return 0;
 
 }
 
 
-int bsearch(int arr[],int size,int item)
+int BinrySearch(int a[],int size,int item)
 {
 int beg,last,mid;
 beg=0; last=size-1;
@@ -36,10 +33,10 @@ while(beg<=last)
 {
 	mid=(int)((beg+last)/2);
 
-	if(item==arr[mid])
+	if(item==a[mid])
 	return mid;
 
-	else if(item>arr[mid])
+	else if(item>a[mid])
 	beg=mid+1;
 
 	else
